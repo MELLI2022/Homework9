@@ -4,7 +4,6 @@ public class Main {
 
     public static void main(String[] args) {
         int[] payments = generateRandomArray();
-        System.out.println(Arrays.toString(payments));
 
         System.out.println("Задача 1");
         int[] cost = new int[30];
@@ -17,20 +16,20 @@ public class Main {
         System.out.println("Задача 2");
 
          int max = Integer.MIN_VALUE;
-         int min = Integer.MIN_VALUE;
+         int min = Integer.MAX_VALUE;
          for (int payment : payments) {
             if (payment > max) {
               max = payment;
            }
-            if (payment < max) {
+            if (payment < min) {
                   min = payment;
              }
           }
          System.out.println("«Минимальная сумма трат за день составила "+min+" рублей. Максимальная сумма трат за день составила "+max+" рублей».");
 
          System.out.println("Задача 3");
-         int avergeSpending = sum / payments.length;//средние траты
-         System.out.println("Средняя сумма трат за месяц составила "+avergeSpending+" рублей" );
+         double averageSpending = (double) sum / payments.length;//средние траты
+         System.out.println("Средняя сумма трат за месяц составила "+averageSpending+" рублей" );
 
          System.out.println("Задача 4");
          char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
